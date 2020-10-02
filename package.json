@@ -1,0 +1,18 @@
+{
+  "name": "serverless-base",
+  "version": "1.0.0",
+  "description": "Node serverless base",
+  "main": "handler.js",
+  "scripts": {
+    "dev": "sls offline start --stage dev"
+  },
+  "author": "LeonardoGM",
+  "license": "ISC",
+  "devDependencies": {
+    "aws-sdk": "^2.766.0",
+    "serverless": "^2.4.0",
+    "serverless-bundle": "^3.1.0",
+    "serverless-dotenv-plugin": "^3.0.0",
+    "serverless-offline": "^6.8.0"
+  }
+}

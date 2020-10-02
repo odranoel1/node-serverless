@@ -1,0 +1,20 @@
+service: node-serverless-base
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: ${env:STAGE}
+  region: ${env:REGION}
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+        - http:
+            path: /api/hello
+            method: get
+
+plugins:
+  - serverless-offline
+  - serverless-dotenv-plugin
+  - serverless-bundle
